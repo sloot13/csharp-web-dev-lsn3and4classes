@@ -6,12 +6,27 @@ namespace SchoolPractice
     {
         public static void Main(string[] args)
         {
-            // TODO: Instantiate your objects and test your exercise solutions with print statements here.
-            Student kevin = new Student();
-            kevin.Name = "Kevin";
-            kevin.StudentId = 234;
-            kevin.NumberOfCredits = 1;
-            kevin.Gpa = 4.0;
+
+            Student moe = new Student("Moe", 1, 1, 4.0);
+            Student kevin = new Student("Kevin", 1, 1, 4.0);
+            Course test = new Course();
+            Course test1 = new Course();
+
+            Console.WriteLine(moe.ToString());
+
+            
+
+            Console.WriteLine(kevin.ToString());
+
+            Console.WriteLine(kevin.Equals(moe));
+            Console.WriteLine(kevin.GetGradeLevel());
+            kevin.AddGrade(3, 2.0);
+            Console.WriteLine(kevin.ToString());
+            Console.WriteLine(test.ToString());
+            Console.WriteLine(test.Equals(test1));
+
+
+
         }
     }
 }
